@@ -30,4 +30,14 @@ object CollectListExample extends App {
   df.groupBy("name").agg(collect_set("booksIntersted")
     .as("booksIntersted"))
     .show(false)
+  
+/*
+groupBy("opp_id")
+ .agg(
+		concat_ws(",",collect_list($"card")).alias("card"),
+		max("no1").as("no1")
+	)
+ .show(false)	
+  */
+  
 }
